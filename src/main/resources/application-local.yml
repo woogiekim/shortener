@@ -1,0 +1,10 @@
+spring:
+  datasource:
+    url: ${datasource.url:jdbc:mysql://localhost:3306/shortener}
+    username: ${datasource.username:root}
+    password: ${datasource.password:1234}
+  jpa:
+    generate-ddl: true
+    hibernate:
+      ddl-auto: update
+    show-sql: true

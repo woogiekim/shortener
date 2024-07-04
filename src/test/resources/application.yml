@@ -1,0 +1,16 @@
+spring:
+  datasource:
+    driver-class-name: org.testcontainers.jdbc.ContainerDatabaseDriver
+    url: jdbc:tc:mysql:8://shortenertest
+  jpa:
+    generate-ddl: true
+    hibernate:
+      ddl-auto: create-drop
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQLDialect
+        physical_naming_strategy: org.hibernate.boot.model.naming.CamelCaseToUnderscoresNamingStrategy
+        implicit_naming_strategy: org.springframework.boot.orm.jpa.hibernate.SpringImplicitNamingStrategy
+        format_sql: true
+    show-sql: false
+    open-in-view: false
