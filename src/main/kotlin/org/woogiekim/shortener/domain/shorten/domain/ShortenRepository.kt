@@ -5,6 +5,8 @@ import org.springframework.data.jpa.repository.Query
 
 interface ShortenRepository : JpaRepository<Shorten, Long> {
 
+    fun findShortenByCode(code: String): Shorten
+
     @Query("""
         select su
         from ShortenUsage su

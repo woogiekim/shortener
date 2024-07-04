@@ -31,6 +31,10 @@ class Shorten private constructor(
         require(code.length == MAXIMUM_CODE_LENGTH)
     }
 
+    fun access() {
+        this.usage!!.access()
+    }
+
     companion object {
         const val MAXIMUM_CODE_LENGTH = 8
 
