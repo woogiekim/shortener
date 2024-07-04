@@ -5,7 +5,7 @@ import org.assertj.core.api.Assertions.assertThatIllegalArgumentException
 import org.junit.jupiter.api.Test
 import org.junit.jupiter.params.ParameterizedTest
 import org.junit.jupiter.params.provider.ValueSource
-import org.woogiekim.shortener.domain.shorten.component.CodeGenerator
+import org.woogiekim.shortener.domain.shorten.domain.component.CodeGenerator
 import org.woogiekim.shortener.domain.shorten.domain.Shorten.Companion.MAXIMUM_CODE_LENGTH
 import org.woogiekim.shortener.domain.shorten.domain.Shorten.Companion.createShorten
 

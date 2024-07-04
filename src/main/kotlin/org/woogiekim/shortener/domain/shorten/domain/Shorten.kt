@@ -1,7 +1,7 @@
 package org.woogiekim.shortener.domain.shorten.domain
 
 import jakarta.persistence.*
-import org.woogiekim.shortener.domain.shorten.component.CodeGenerator
+import org.woogiekim.shortener.domain.shorten.domain.component.CodeGenerator
 import org.woogiekim.shortener.domain.shorten.domain.ShortenUsage.Companion.createShortenUsage
 import org.woogiekim.shortener.support.BaseAggregateRoot
 import java.time.OffsetDateTime
