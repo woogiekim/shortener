@@ -5,17 +5,17 @@ import org.springframework.http.ResponseEntity
 import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.PathVariable
 import org.springframework.web.bind.annotation.RestController
-import org.woogiekim.shortener.domain.shorten.application.usecase.ShortenRedirector
-import org.woogiekim.shortener.domain.shorten.application.usecase.ShortenRedirectorCommand
+import org.woogiekim.shortener.domain.shorten.application.usecase.ShortenAccessor
+import org.woogiekim.shortener.domain.shorten.application.usecase.ShortenAccessorCommand
 
 @RestController
 class RedirectApi(
-    private val shortenRedirector: ShortenRedirector
+    private val shortenAccessor: ShortenAccessor
 ) {
 
     @GetMapping("/{code}")
     fun redirect(@PathVariable code: String): ResponseEntity<Any> {
-        val location = shortenRedirector.redirect(ShortenRedirectorCommand(code))
+        val location = shortenAccessor.access(ShortenAccessorCommand(code))
 
         return ResponseEntity
             .status(HttpStatus.FOUND)

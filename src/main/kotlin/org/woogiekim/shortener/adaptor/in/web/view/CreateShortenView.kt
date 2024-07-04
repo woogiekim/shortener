@@ -22,4 +22,3 @@ class CreateShortenRes(
         .port(req.serverPort)
         .path(shorten.code).toUriString()
 )
-
